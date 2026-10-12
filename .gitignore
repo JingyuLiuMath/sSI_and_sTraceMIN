@@ -1,0 +1,37 @@
+# Generated experiment data and figures.
+# Keep each output directory's .gitignore placeholder in the repository.
+/experiments/**/data/*
+!/experiments/**/data/.gitignore
+/experiments/**/figure/*
+!/experiments/**/figure/.gitignore
+
+# Comparison logs/figures and archived implementations.
+/report/
+/oldcodes/
+
+# Slurm stdout/stderr and other runtime logs.
+*.out
+*.err
+*.log
+diary
+
+# MATLAB autosaves and crash dumps.
+*.asv
+*.m~
+*.mlx~
+matlab_crash_dump*
+hs_err_pid*
+
+# Editor backups and operating-system metadata.
+*~
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Benchmark inputs under matrices/ (including *.mat and .gitkeep),
+# MATLAB/shell source files, README.md, and LICENSE are intentionally kept.
+# There is no repository-wide *.mat, *.pdf, or *.txt rule, so input data
+# and documentation are not excluded by extension.
+# Ignore rules apply to untracked files; already-tracked files stay tracked.
