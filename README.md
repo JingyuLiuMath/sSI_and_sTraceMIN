@@ -97,7 +97,7 @@ The benchmark loader [FileSVDExp.m](matrices/FileSVDExp.m) reads `Problem.A` fro
 
 Edit [exp_SI_settings.m](experiments/SI/exp_SI_settings.m) or [exp_TrMIN_settings.m](experiments/TrMIN/exp_TrMIN_settings.m) to choose matrices, dimensions, tolerance, repetitions, sketch factors, and output paths. The settings scripts clear workspace variables, so configure them in the files before running the experiment entry points.
 
-Run SI/sSI experiments and then generate tables and residual plots:
+Run SI/sSI experiments and then generate tables, residual plots, and soft-locking histories:
 
 ```matlab
 % From the repository root after setuppath:
@@ -106,6 +106,7 @@ exp_SI;
 exp_sSI;
 print_SI;
 plot_res_SI;
+plot_nlock_hist_SI;
 cd('../..');
 ```
 
@@ -117,12 +118,11 @@ exp_TrMIN;
 exp_sTrMIN;
 print_TrMIN;
 plot_res_TrMIN;
+plot_nlock_hist_TrMIN;
 cd('../..');
 ```
 
-The experiment scripts save MAT files containing per-run results. The table and residual-plot scripts select the run with median total runtime. Tables report the final original-space residual; plots label sketched histories as `sres`.
-
-For runtime breakdowns, run `plot_ratios_SI` or `plot_ratios_TrMIN` from the corresponding directory after generating the selected data. These scripts currently select matrix indices `[2, 6, 8, 10, 12]`; align their `fileNo_list` with the completed experiments before plotting.
+The experiment scripts save MAT files containing per-run results. The table, residual-plot, and soft-locking-plot scripts select the run with median total runtime. Tables report the final original-space residual; residual plots label sketched histories as `sres`.
 
 Additional experiment entry points are:
 
