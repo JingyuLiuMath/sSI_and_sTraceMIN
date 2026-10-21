@@ -1,5 +1,9 @@
 # sSI and sTraceMIN
 
+This repo contains code to reproduce the numerical experiments in [1].
+
+[1] Jingyu Liu and Yuqi Liu. Real-arithmetic sketched eigensolvers for symmetric matrices. arXiv:2610.22261.
+
 MATLAB implementations of subspace iteration (SI), TraceMIN (TrMIN), and their sketched variants, sSI and sTrMIN, for computing the smallest eigenpairs of real symmetric positive definite matrices.
 
 The sketched methods use sketch-based basis whitening and an ordered real Schur decomposition of the projected matrix. They finish with Euclidean QR and ordinary Rayleigh–Ritz extraction. This repository contains the four solvers, their shared utilities, and experiments for convergence, runtime, and projection/sketch costs.
